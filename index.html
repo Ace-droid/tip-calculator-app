@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="header">spli <br />tter</h1>
+      <div class="grid">
+        <div class="first-container grid-space" data-spacing="large">
+          <div class="bill-input grid-space">
+            <p class="text">bill</p>
+            <input
+              type="number"
+              inputmode="numeric"
+              class="text-area"
+              id="bill"
+              required
+            />
+            <span class="dollar-icon">
+              <img src="images/icon-dollar.svg" alt="" />
+            </span>
+          </div>
+          <div class="section-2 grid-space">
+            <p class="text">select tip %</p>
+            <div class="btn-container">
+              <input type="radio" id="tip5" name="percent" value="5" class="btn" />
+              <label  for="tip5">5%</label>
+              <input type="radio" id="tip10" name="percent" value="10" checked="checked" class="btn" />
+              <label for="tip10">10%</label>
+              <input type="radio"  id="tip15" name="percent" class="btn" value="15" />
+              <label for="tip15">15%</label>
+              <input type="radio" id="tip25" name="percent" class="btn" value="25" />
+              <label for="tip25">25%</label>
+              <input type="radio" id="tip50" name="percent" class="btn" value="50" />
+              <label for="tip50">50%</label>
+              <div class="input-tip btn">
+                <input
+                  type="number"
+                  id="input-percent"
+                  class="random-percent"
+                  placeholder="Costom"
+                  inputmode="numeric"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="no-people grid-space">
+            <div class="flex-error">
+              <p class="text">number of people</p>
+              <p id="error-msg" class="error-msg"></p>
+            </div>
+
+            <input
+              type="number"
+              class="person-textarea"
+              id="no-people"
+              required
+              inputmode="numeric"
+            />
+            <span class="person-icon"
+              ><img src="images/icon-person.svg" alt=""
+            /></span>
+          </div>
+        </div>
+        <div class="total-amount-section grid-space" data-spacing="">
+          <div class="flex">
+            <div class="">
+              <p class="amount-text">tip amount</p>
+              <p class="fade">/ person</p>
+            </div>
+            <div>
+              <p class="amount" id="tip-amount">$0.00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <p class="amount-text">total</p>
+              <p class="fade">/ person</p>
+            </div>
+            <div>
+              <p class="amount" id="total-amount">$0.00</p>
+            </div>
+          </div>
+
+          <button id="reset-btn" class="reset-btn">Reset</button>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
